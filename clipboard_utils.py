@@ -25,10 +25,6 @@ import pyperclip
 
 
 
-CLIPBOARD_INPUT_PATH = 'clipboard_input.txt'
-
-
-
 def get_clipboard():
     return(Tk().clipboard_get())
 
