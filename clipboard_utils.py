@@ -20,17 +20,17 @@ if util_submodule_import_check_count != len(util_submodule_l)    :    raise Exce
 
 
 
-from tkinter import Tk
-from ctypes  import windll
+# from tkinter import Tk
+from ctypes import windll
 import pyperclip
 
 
 def get_clipboard():
-    return(Tk().clipboard_get())
+#     return(Tk().clipboard_get())
+    return(pyperclip.paste())
 
 def set_clipboard(i):
     pyperclip.copy(i)
-    spam = pyperclip.paste()
 
 def clear_clipboard():
     if windll.user32.OpenClipboard(None):
