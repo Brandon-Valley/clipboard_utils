@@ -1,6 +1,7 @@
 # from tkinter import Tk
 from ctypes import windll
-import pyperclip
+from pyperclip import copy
+from pyperclip import paste
 
 
 if __name__ == "__main__": 
@@ -14,10 +15,10 @@ else:
 
 def get_clipboard():
 #     return(Tk().clipboard_get())
-    return(pyperclip.paste())
+    return(paste())
 
 def set_clipboard(i):
-    pyperclip.copy(i)
+    copy(i)
 
 def clear_clipboard():
     if windll.user32.OpenClipboard(None):
@@ -29,6 +30,7 @@ def clear_clipboard():
 if __name__ == '__main__':
     print('In Main:  clipboard_utils')
 #     a = read_from_clipboard_input()
+    print(get_clipboard())
 
 
 
